@@ -9,8 +9,6 @@ package ar.fiuba.tdd.template;
 
 public class NullNode<T> implements Node<T> {
 
-    private Node<T> nextNode;
-
     public T getData() throws AssertionError {
         throw  new AssertionError();
     }
@@ -33,6 +31,6 @@ public class NullNode<T> implements Node<T> {
     }
 
     public void setNext(Node<T> nextNode) {
-        this.nextNode = nextNode;
+        throw new AssertionError();
     }
 }
