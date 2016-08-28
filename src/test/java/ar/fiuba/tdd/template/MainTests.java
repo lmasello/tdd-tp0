@@ -48,7 +48,7 @@ public class MainTests {
     }
 
     @Test
-    public void theQueueWorksAsFIFO() {
+    public void theQueueWorksAsFiFo() {
         myQueue.add(4);
         myQueue.add(5);
         myQueue.add(6);

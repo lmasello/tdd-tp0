@@ -1,7 +1,6 @@
 package ar.fiuba.tdd.template;
 
-/**
- * #### Tecnicas de disenio ####
+/* Tecnicas de disenio
  * #TP: 0
  * Author: Leandro Masello
  * Padron: 93106
@@ -9,7 +8,7 @@ package ar.fiuba.tdd.template;
 
 public class DataNode<T> implements Node<T> {
     private T data;
-    private Node<T> nextNode = new NullNode<T> ();
+    private Node<T> nextNode = new NullNode<T>();
 
     public DataNode(T data) {
         this.data = data;

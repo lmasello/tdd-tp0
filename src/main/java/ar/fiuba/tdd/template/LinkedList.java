@@ -1,14 +1,12 @@
 package ar.fiuba.tdd.template;
 
-/**
- * #### Tecnicas de disenio ####
+/* Tecnicas de disenio
  * #TP: 0
  * Author: Leandro Masello
  * Padron: 93106
  */
 
-/**
- * The structure of the LinkedList is:
+/* The structure of the LinkedList is:
  * ParentNode -> NullNode
  * ParentNode -> DataNode -> NullNode
  */
@@ -29,11 +27,11 @@ public class LinkedList<T> {
         this.firstElement.addToEnd(new DataNode<T>(item), this.firstElement);
     }
 
-    public T getFirst() throws AssertionError{
+    public T getFirst() throws AssertionError {
         return this.firstElement.getNext().getData();
     }
 
-    public void removeFirst() throws AssertionError{
+    public void removeFirst() throws AssertionError {
         this.firstElement.setNext(this.firstElement.getNext().getNext());
     }
 }

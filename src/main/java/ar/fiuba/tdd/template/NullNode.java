@@ -1,6 +1,7 @@
 package ar.fiuba.tdd.template;
-/**
- * #### Tecnicas de disenio ####
+
+/*
+ * Tecnicas de disenio
  * #TP: 0
  * Author: Leandro Masello
  * Padron: 93106
