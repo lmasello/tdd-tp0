@@ -18,12 +18,12 @@ public class ParentNode<T> implements Node<T> {
         return this.nextNode;
     }
 
-    public int getCountOfNodesFromThis() {
-        return this.nextNode.getCountOfNodesFromThis();
-    }
-
     public void addToEnd(Node<T> nodeToBeAdded, Node<T> previous) {
         this.getNext().addToEnd(nodeToBeAdded, this);
+    }
+
+    public int getCountOfNodesFromThis() {
+        return this.nextNode.getCountOfNodesFromThis();
     }
 
     public void setNext(Node<T> nextNode) {
