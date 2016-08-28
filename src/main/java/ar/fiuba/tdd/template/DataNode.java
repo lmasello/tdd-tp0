@@ -7,31 +7,31 @@ package ar.fiuba.tdd.template;
  * Padron: 93106
  */
 
-public class DataNode<T> implements Node<T>{
+public class DataNode<T> implements Node<T> {
     private T data;
-    private Node<T> nextNode = new NullNode<T>();
+    private Node<T> nextNode = new NullNode<T> ();
 
-    public DataNode(T data){
+    public DataNode(T data) {
         this.data = data;
     }
 
-    public T getData(){
+    public T getData() {
         return this.data;
     }
 
-    public Node<T> getNext(){
+    public Node<T> getNext() {
         return this.nextNode;
     }
 
-    public int getCountOfNodesFromThis(){
+    public int getCountOfNodesFromThis() {
         return 1 + this.nextNode.getCountOfNodesFromThis();
     }
 
-    public void addToEnd(Node<T> nodeToBeAdded, Node<T> previous){
+    public void addToEnd(Node<T> nodeToBeAdded, Node<T> previous) {
         this.getNext().addToEnd(nodeToBeAdded, this);
     }
 
-    public void setNext(Node<T> nextNode){
+    public void setNext(Node<T> nextNode) {
         this.nextNode = nextNode;
     }
 }

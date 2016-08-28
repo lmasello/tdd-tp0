@@ -14,7 +14,9 @@ public class MainTests {
     }
 
     @Test
-    public void atFirstItIsEmpty() { assertEquals(true, myQueue.isEmpty());}
+    public void atFirstItIsEmpty() {
+        assertEquals(true, myQueue.isEmpty());
+    }
 
     @Test
     public void withElementsItIsNotEmpty() {
@@ -24,7 +26,7 @@ public class MainTests {
     }
 
     @Test
-    public void sizeIncreaseWithNewElements(){
+    public void sizeIncreaseWithNewElements() {
         assertEquals(0, myQueue.size());
         myQueue.add(4);
         assertEquals(1, myQueue.size());
@@ -35,7 +37,7 @@ public class MainTests {
     }
 
     @Test
-    public void sizeDecreaseWhenRemoveElements(){
+    public void sizeDecreaseWhenRemoveElements() {
         myQueue.add(4);
         myQueue.add(4);
         assertEquals(2, myQueue.size());
@@ -46,7 +48,7 @@ public class MainTests {
     }
 
     @Test
-    public void theQueueWorksAsFIFO(){
+    public void theQueueWorksAsFIFO() {
         myQueue.add(4);
         myQueue.add(5);
         myQueue.add(6);
@@ -61,14 +63,14 @@ public class MainTests {
     }
 
     @Test(expected = AssertionError.class)
-    public void throwAssertionErrorWithTopAndEdgeConditions(){
+    public void throwAssertionErrorWithTopAndEdgeConditions() {
         assertEquals(true, myQueue.isEmpty());
         myQueue.top();
 //        assertEquals(new AssertionError(), myQueue.remove());
     }
 
     @Test(expected = AssertionError.class)
-    public void throwAssertionErrorWithRemoveAndEdgeConditions(){
+    public void throwAssertionErrorWithRemoveAndEdgeConditions() {
         assertEquals(true, myQueue.isEmpty());
         myQueue.remove();
     }

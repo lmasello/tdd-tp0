@@ -7,24 +7,25 @@ package ar.fiuba.tdd.template;
  * Padron: 93106
  */
 
-/*
+/**
  * The structure of the LinkedList is:
  * ParentNode -> NullNode
  * ParentNode -> DataNode -> NullNode
  */
+
 public class LinkedList<T> {
 
     private Node<T> firstElement;
 
-    public LinkedList(){
+    public LinkedList() {
         firstElement = new ParentNode<T>();
     }
 
-    public int size(){
+    public int size() {
         return this.firstElement.getCountOfNodesFromThis();
     }
 
-    public void append(T item){
+    public void append(T item) {
         this.firstElement.addToEnd(new DataNode<T>(item), this.firstElement);
     }
 

@@ -6,19 +6,19 @@ package ar.fiuba.tdd.template;
  * Padron: 93106
  */
 
-public class NullNode<T> implements Node<T>{
+public class NullNode<T> implements Node<T> {
 
     private Node<T> nextNode;
 
-    public T getData() throws AssertionError{
+    public T getData() throws AssertionError {
         throw  new AssertionError();
     }
 
-    public Node<T> getNext() throws AssertionError{
+    public Node<T> getNext() throws AssertionError {
         throw  new AssertionError();
     }
 
-    public int getCountOfNodesFromThis(){
+    public int getCountOfNodesFromThis() {
         return 0;
     }
 
@@ -27,11 +27,11 @@ public class NullNode<T> implements Node<T>{
      * previous -> NullNode
      * previous -> nodeToBeAdded
      */
-    public void addToEnd(Node<T> nodeToBeAdded, Node<T> previous){
+    public void addToEnd(Node<T> nodeToBeAdded, Node<T> previous) {
         previous.setNext(nodeToBeAdded);
     }
 
-    public void setNext(Node<T> nextNode){
+    public void setNext(Node<T> nextNode) {
         this.nextNode = nextNode;
     }
 }

@@ -10,33 +10,33 @@ public class Queue<T> {
 
     private LinkedList<T> listOfItems;
 
-    public Queue(){
+    public Queue() {
         listOfItems = new LinkedList<T>();
     }
 
-    public boolean isEmpty(){
+    public boolean isEmpty() {
         return (this.size() == 0);
     }
 
-    public int size(){
+    public int size() {
         return this.listOfItems.size();
     }
 
-    public void add(T item){
+    public void add(T item) {
         listOfItems.append(item);
     }
 
     /*
     It returns the first item or raises an exception if the queue is empty.
      */
-    public T top() throws AssertionError{
+    public T top() throws AssertionError {
         return listOfItems.getFirst();
     }
 
     /*
     It removes the first item or raises an exception if the queue is empty.
      */
-    public void remove() throws AssertionError{
+    public void remove() throws AssertionError {
         listOfItems.removeFirst();
     }
 }
