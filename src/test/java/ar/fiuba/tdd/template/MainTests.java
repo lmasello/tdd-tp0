@@ -66,7 +66,6 @@ public class MainTests {
     public void throwAssertionErrorWithTopAndEdgeConditions() {
         assertEquals(true, myQueue.isEmpty());
         myQueue.top();
-//        assertEquals(new AssertionError(), myQueue.remove());
     }
 
     @Test(expected = AssertionError.class)
